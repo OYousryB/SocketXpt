@@ -23,6 +23,28 @@ public class Lineitem implements Serializable {
     public Lineitem() {
     }
 
+    @Override
+    public String toString() {
+        return "Lineitem{" +
+                "l_orderkey=" + l_orderkey +
+                ", l_partkey=" + l_partkey +
+                ", l_suppkey=" + l_suppkey +
+                ", l_linenumber=" + l_linenumber +
+                ", l_quantity=" + l_quantity +
+                ", l_extendedprice=" + l_extendedprice +
+                ", l_discount=" + l_discount +
+                ", l_tax=" + l_tax +
+                ", l_returnflag='" + l_returnflag + '\'' +
+                ", l_linestatus='" + l_linestatus + '\'' +
+                ", l_shipdate='" + l_shipdate + '\'' +
+                ", l_commitdate='" + l_commitdate + '\'' +
+                ", l_receiptdate='" + l_receiptdate + '\'' +
+                ", l_shipinstruct='" + l_shipinstruct + '\'' +
+                ", l_shipmode='" + l_shipmode + '\'' +
+                ", l_comment='" + l_comment + '\'' +
+                '}';
+    }
+
     public Lineitem(long l_orderkey, long l_partkey, long l_suppkey, long l_linenumber, double l_quantity, double l_extendedprice, double l_discount, double l_tax, String l_returnflag, String l_linestatus, String l_shipdate, String l_commitdate, String l_receiptdate, String l_shipinstruct, String l_shipmode, String l_comment) {
         this.l_orderkey = l_orderkey;
         this.l_partkey = l_partkey;

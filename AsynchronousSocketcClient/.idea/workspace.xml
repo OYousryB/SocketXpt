@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7263c43-2601-40f8-b5a7-d976f3083480" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/pipe/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/pipe/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/pipe/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/pipe/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/objects/Lineitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/objects/Lineitem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/tcp/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/tcp/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/tcp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/tcp/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/objects/Lineitem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/objects/Lineitem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/pipe/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/pipe/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/pipe/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/pipe/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/tcp/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/tcp/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/tcp/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/tcp/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/objects/Lineitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objects/Lineitem.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,10 +72,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Dummy ClientWithObjects">
+  <component name="RunManager" selected="Application.MiddleMan">
     <configuration name="Dummy Client" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Dummy.Client" />
-      <module name="AsynchronousSocketcClient" />
+      <module name="asynchronous.socket.client" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Dummy.*" />
@@ -81,7 +88,7 @@
     </configuration>
     <configuration name="Dummy ClientWithObjects" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Dummy.ClientWithObjects" />
-      <module name="AsynchronousSocketcClient" />
+      <module name="asynchronous.socket.client" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Dummy.tcp.udp.*" />
@@ -92,22 +99,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MiddleMan (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="MiddleMan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="incorta.udp.MiddleMan" />
-      <module name="AsynchronousSocketcClient" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="incorta.udp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MiddleManWithObjects (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="incorta.udp.MiddleManWithObjects" />
-      <module name="AsynchronousSocketcClient" />
+      <module name="asynchronous.socket.client" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="incorta.udp.*" />
@@ -120,10 +114,23 @@
     </configuration>
     <configuration name="MiddleManWithObjects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="incorta.pipe.MiddleManWithObjects" />
-      <module name="AsynchronousSocketcClient" />
+      <module name="asynchronous.socket.client" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="incorta.pipe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MiddleManWithObjects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="incorta.udp.MiddleManWithObjects" />
+      <module name="asynchronous.socket.client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="incorta.udp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,15 +142,14 @@
       <item itemvalue="Application.Dummy ClientWithObjects" />
       <item itemvalue="Application.Dummy Client" />
       <item itemvalue="Application.MiddleManWithObjects" />
-      <item itemvalue="Application.MiddleMan (1)" />
-      <item itemvalue="Application.MiddleManWithObjects (1)" />
+      <item itemvalue="Application.MiddleMan" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Dummy ClientWithObjects" />
-        <item itemvalue="Application.MiddleManWithObjects (1)" />
+        <item itemvalue="Application.MiddleManWithObjects" />
         <item itemvalue="Application.Dummy Client" />
-        <item itemvalue="Application.MiddleMan (1)" />
+        <item itemvalue="Application.MiddleMan" />
         <item itemvalue="Application.MiddleManWithObjects" />
       </list>
     </recent_temporary>

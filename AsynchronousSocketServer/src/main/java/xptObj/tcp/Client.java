@@ -11,8 +11,7 @@ import java.util.ArrayList;
 
 public class Client {
     private Client(String address, int port) {
-        ObjectInputStream in = null;
-        Socket socket = null;
+        Socket socket;
         String line = "";
 
         Kryo kryo = new Kryo();
@@ -23,20 +22,28 @@ public class Client {
             Input input = new Input(socket.getInputStream());
             System.out.println("Waiting");
             long start = System.currentTimeMillis();
-            while (line != null) {
-                try {
-                    Lineitem x = kryo.readObject(input, Lineitem.class);
-                    System.out.println(x.getL_orderkey());
-                } catch (Exception e) {
-                    line = null;
-                }
+            int count = 0;
+            ArrayList responseItems = kryo.readObject(input, ArrayList.class);
+            System.out.println(responseItems.size());
+            for(int i = 0; i<responseItems.size(); i++){
+                responseItems.get(i);
             }
+//            while (line != null) {
+//                try {
+//                    Lineitem x = kryo.readObject(input, Lineitem.class);
+////                    System.out.println(x.toString());
+//                    count++;
+//                } catch (Exception e) {
+//                    line = null;
+//                }
+//            }
+//            System.out.println(count);
             long finish = System.currentTimeMillis();
             System.out.println("Finished an : " + finish + " Secs");
             System.out.println("Finished in : " + ((finish - start)/ 1000) + " Secs");
             socket.close();
-        } catch(IOException i) {
-            System.out.println(i);
+        } catch(IOException e) {
+            e.printStackTrace();
         }
     }
 

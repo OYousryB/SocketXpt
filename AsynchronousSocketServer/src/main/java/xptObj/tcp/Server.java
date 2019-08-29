@@ -31,14 +31,15 @@ public class Server {
                 Thread.sleep(10000);
 
                 long start = System.currentTimeMillis();
+                kryo.writeObject(outStream, lineitems);
 
-                lineitems.forEach(object -> {
-                    try {
-                        kryo.writeObject(outStream, object);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                });
+//                lineitems.forEach(object -> {
+//                    try {
+//                        kryo.writeObject(outStream, object);
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                });
                 long finish = System.currentTimeMillis();
                 System.out.println("Started at : " + start + " Secs");
                 System.out.println("Finished in : " + ((finish - start)/ 1000) + " Secs");
@@ -71,6 +72,6 @@ public class Server {
     }
 
     public static void main(String[] args) {
-        new Server(6000, "/home/yousry/dummy_db/tpch/1/tbl2/lineitem.150k.1");
+        new Server(6000, "/home/yousry/dummy_db/tpch/1/tbl/lineitem/lineitem.tbl.1");
     }
 }

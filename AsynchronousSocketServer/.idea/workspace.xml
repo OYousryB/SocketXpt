@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="84894d02-56a2-4a8d-87b7-705a77ea2018" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/objects/Lineitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objects/Lineitem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xptObj/tcp/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xptObj/tcp/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xptObj/tcp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xptObj/tcp/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/objects/Lineitem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/objects/Lineitem.class" afterDir="false" />
@@ -11,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/xptObj/tcp/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xptObj/tcp/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/xptObj/tcp/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xptObj/tcp/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketcClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketcClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketcClient/src/main/java/objects/Lineitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketcClient/src/main/java/objects/Lineitem.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
