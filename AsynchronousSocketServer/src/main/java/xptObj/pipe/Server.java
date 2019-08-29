@@ -2,13 +2,12 @@ package xptObj.pipe;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Output;
-import helper.InstrumentationAgent;
 import objects.Lineitem;
-import objects.Nation;
 
-import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,14 +17,12 @@ public class Server {
         registerKryoClasses(kryo);
 
         try (DataInputStream rawData = new DataInputStream(new FileInputStream(inputPath))){
-//            try (ObjectOutputStream pipe = new ObjectOutputStream(new FileOutputStream(pipePath))) {
             try (Output output = new Output(new FileOutputStream(pipePath))){
                 List<Lineitem> lineItems = new ArrayList<>();
                 registerLineItems(lineItems, rawData);
 
                 long start = System.currentTimeMillis();
                 kryo.writeObject(output, lineItems);
-//            pipe.writeObject(lineItems);
                 long finish = System.currentTimeMillis();
 
                 System.out.println("Started at : " + start + " Secs");

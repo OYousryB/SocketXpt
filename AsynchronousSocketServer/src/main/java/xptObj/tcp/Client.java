@@ -4,8 +4,8 @@ import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
 import objects.Lineitem;
 
-import java.io.*;
-import java.net.ServerSocket;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.util.ArrayList;
 
@@ -20,16 +20,12 @@ public class Client {
         try {
             socket = new Socket(address, port);
             System.out.println("Connected With Spark Client");
-
             Input input = new Input(socket.getInputStream());
-//            in = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
-            int count = 0;
             System.out.println("Waiting");
             long start = System.currentTimeMillis();
             while (line != null) {
                 try {
                     Lineitem x = kryo.readObject(input, Lineitem.class);
-//                    in.readObject();
                     System.out.println(x.getL_orderkey());
                 } catch (Exception e) {
                     line = null;

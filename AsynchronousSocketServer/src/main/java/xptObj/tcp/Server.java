@@ -13,11 +13,8 @@ import java.util.List;
 public class Server {
     private Server(int port, String inputPath) {
         DataInputStream rawData;
-//        ObjectOutputStream outStream;
         Output outStream;
-
-            List<Lineitem> lineitems = new ArrayList<>();
-
+        List<Lineitem> lineitems = new ArrayList<>();
         Kryo kryo = new Kryo();
         registerKryoClasses(kryo);
 
@@ -26,7 +23,6 @@ public class Server {
             System.out.println("Waiting for Incorta Client ...");
 
             try (Socket socket = server.accept()){
-//                outStream = new ObjectOutputStream(socket.getOutputStream());
                 outStream =  new Output(socket.getOutputStream());
                 System.out.println("Connected with Incorta Client");
 
@@ -36,12 +32,9 @@ public class Server {
 
                 long start = System.currentTimeMillis();
 
-//                kryo.writeObject(outStream, lineitems);
-//                Output finalOutStream = outStream;
                 lineitems.forEach(object -> {
                     try {
                         kryo.writeObject(outStream, object);
-//                        outStream.writeObject(object);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
