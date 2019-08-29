@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7263c43-2601-40f8-b5a7-d976f3083480" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/pipe/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/pipe/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/pipe/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/pipe/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/META-INF/AsynchronousSocketServer.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/tcp/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/tcp/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/tcp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/tcp/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/objects/Lineitem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/objects/Lineitem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/pipe/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/pipe/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/pipe/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/pipe/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/tcp/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/tcp/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/tcp/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/tcp/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

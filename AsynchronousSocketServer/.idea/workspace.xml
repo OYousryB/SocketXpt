@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84894d02-56a2-4a8d-87b7-705a77ea2018" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xptObj/pipe/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xptObj/pipe/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xptObj/pipe/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xptObj/pipe/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/AsynchronousSocketServer.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xptObj/tcp/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xptObj/tcp/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xptObj/tcp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xptObj/tcp/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/objects/Lineitem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/objects/Lineitem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/xptObj/pipe/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xptObj/pipe/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/xptObj/pipe/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xptObj/pipe/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/xptObj/tcp/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xptObj/tcp/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/xptObj/tcp/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xptObj/tcp/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketcClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketcClient/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Client (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="xptObj.pipe.Client" />
       <module name="asynchronous.socket.server" />
@@ -91,7 +91,7 @@
     </configuration>
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="xptObj.tcp.Client" />
-      <module name="AsynchronousSocketServer" />
+      <module name="asynchronous.socket.server" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="xptObj.tcp.*" />
@@ -104,7 +104,7 @@
     </configuration>
     <configuration name="Server (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="xptObj.tcp.Server" />
-      <module name="AsynchronousSocketServer" />
+      <module name="asynchronous.socket.server" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="xptObj.tcp.*" />
@@ -150,10 +150,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server" />
-        <item itemvalue="Application.Client (1)" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server (1)" />
+        <item itemvalue="Application.Client (1)" />
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Server (3)" />
       </list>
     </recent_temporary>
