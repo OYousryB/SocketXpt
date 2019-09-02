@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7263c43-2601-40f8-b5a7-d976f3083480" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/TestClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/TestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/TestServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/client/KyroClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/client/KryoTCPClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/client/UDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/client/UDPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/server/AbstractServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/server/AbstractServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/server/KyroServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/server/KryoTCPServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/server/UDPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/server/UDPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/util/Profiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/io/util/Profiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/udp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/src/main/java/xptObj/udp/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/TestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/TestClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/TestServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/TestServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/client/KyroClient.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/client/UDPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/client/UDPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/server/AbstractServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/server/AbstractServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/server/KyroServer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/server/UDPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/server/UDPServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/util/Profiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/io/util/Profiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/udp/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketServer/target/classes/xptObj/udp/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

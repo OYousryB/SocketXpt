@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84894d02-56a2-4a8d-87b7-705a77ea2018" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/TestClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/TestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/TestServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/client/KyroClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/client/KryoTCPClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/client/UDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/client/UDPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/server/AbstractServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/server/AbstractServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/server/KyroServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/server/KryoTCPServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/server/UDPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/server/UDPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/util/Profiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/util/Profiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xptObj/udp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xptObj/udp/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/TestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/TestClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/TestServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/TestServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/client/KyroClient.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/client/UDPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/client/UDPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/server/AbstractServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/server/AbstractServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/server/KyroServer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/server/UDPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/server/UDPServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/util/Profiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/util/Profiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/xptObj/udp/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xptObj/udp/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AsynchronousSocketcClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketcClient/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,6 +59,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.client" />
       <recent name="io.server" />
       <recent name="pipe" />
       <recent name="sparkUDP" />
@@ -87,7 +85,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestClient">
+  <component name="RunManager" selected="Application.TestServer">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="xptObj.udp.Client" />
       <module name="asynchronous.socket.server" />
@@ -117,7 +115,7 @@
     <configuration name="TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.TestClient" />
       <module name="asynchronous.socket.server" />
-      <option name="PROGRAM_PARAMETERS" value="udp $USER_HOME$/mypipe" />
+      <option name="PROGRAM_PARAMETERS" value="kryo_tcp $USER_HOME$/mypipe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.*" />
@@ -131,7 +129,7 @@
     <configuration name="TestServer" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.TestServer" />
       <module name="asynchronous.socket.server" />
-      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/dummy_db/tpch/1/tbl2/lineitem.150k.1 udp $USER_HOME$/mypipe" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/dummy_db/tpch/1/tbl/lineitem/lineitem.tbl.1 kryo_tcp $USER_HOME$/mypipe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.*" />

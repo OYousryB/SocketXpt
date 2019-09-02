@@ -19,7 +19,7 @@ public class UDPServer extends AbstractServer<ObjectOutputStream>{
     @Override
     protected ObjectOutputStream start() throws IOException {
         IPAddress = InetAddress.getLocalHost();
-        ByteArrayOutputStream byteStream = new ByteArrayOutputStream(95535);
+        ByteArrayOutputStream byteStream = new ByteArrayOutputStream(999999);
         dataSocket = new DatagramSocket();
         return new ObjectOutputStream(byteStream);
     }

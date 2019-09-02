@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class KyroServer extends AbstractServer<Output> {
+public class KryoTCPServer extends AbstractServer<Output> {
 
     private final Kryo kryo;
     private final int port;
@@ -18,7 +18,7 @@ public class KyroServer extends AbstractServer<Output> {
     private ServerSocket server;
     private Socket socket;
 
-    public KyroServer(int port, Class clazz){
+    public KryoTCPServer(int port, Class clazz){
         this.kryo = new Kryo();
         kryo.register(clazz);
         this.port = port;

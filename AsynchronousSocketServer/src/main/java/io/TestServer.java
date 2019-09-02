@@ -15,11 +15,17 @@ public class TestServer {
             case "tcp":
                 server = new TCPServer(6000);
                 break;
-            case "kryo":
-                server = new KyroServer(6000, Lineitem.class);
-                break;
             case "pipe":
                 server = new NamedPipeServer(args[2]);
+                break;
+            case "kryo_tcp":
+                server = new KryoTCPServer(6000, Lineitem.class);
+                break;
+            case "kryo_udp":
+                server = new KryoUDPServer(6000, Lineitem.class);
+                break;
+            case "kryo_pipe":
+                server = new KryoNamedPipeServer(args[2], Lineitem.class);
                 break;
             default:
                 server = null;
