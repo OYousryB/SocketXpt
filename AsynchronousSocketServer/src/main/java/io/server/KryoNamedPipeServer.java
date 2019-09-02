@@ -12,11 +12,9 @@ public class KryoNamedPipeServer extends AbstractServer<Output> {
     private final String address;
     private Output pipe;
     private final Kryo kryo;
-    private final Class clazz;
 
     public KryoNamedPipeServer(String address, Class clazz) {
         this.address = address;
-        this.clazz = clazz;
 
         this.kryo = new Kryo();
         kryo.register(clazz);

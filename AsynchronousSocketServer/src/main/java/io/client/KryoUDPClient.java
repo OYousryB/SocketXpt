@@ -45,7 +45,7 @@ public class KryoUDPClient extends AbstractClient<Input> {
     @Override
     protected Serializable read(Input inputStream) throws IOException, ClassNotFoundException {
         dataReceive = new DatagramPacket(receive, receive.length);
-        dataSocket.setSoTimeout(50);
+        dataSocket.setSoTimeout(5000);
         dataSocket.receive(dataReceive);
         byte[] data = dataReceive.getData();
         inputStream = new Input(new ByteArrayInputStream(data));
