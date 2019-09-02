@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84894d02-56a2-4a8d-87b7-705a77ea2018" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/TestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/TestServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/client/KyroClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/client/TCPClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/server/KyroServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/util/Profiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/TestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/TestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/TestServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/client/UDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/client/UDPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/server/AbstractServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/server/AbstractServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/server/UDPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/server/UDPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/util/Profiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/util/Profiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xptObj/udp/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xptObj/udp/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/TestServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/TestServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/client/UDPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/client/UDPClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/server/AbstractServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/server/AbstractServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/server/UDPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/server/UDPServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/util/Profiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/util/Profiler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/xptObj/udp/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xptObj/udp/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketcClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketcClient/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,76 +29,6 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="828873288">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="35" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="35" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="1299" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="1299" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/TestServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/TestClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/client/TCPClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -97,36 +36,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>registerLineItems</find>
-      <find>outputStream</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>inputStream</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/io/Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/TCPServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/AbstractServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/util/Profile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/util/Profiler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/server/AbstractServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/client/AbstractClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/server/KyroServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/client/KyroClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/client/TCPClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/server/TCPServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/TestServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/TestClient.java" />
-      </list>
-    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -139,78 +50,8 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1PxJceOnoeAw58geOqNpZAMPZKh" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="asynchronous.socket.server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AsynchronousSocketServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="asynchronous.socket.server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AsynchronousSocketServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="asynchronous.socket.server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AsynchronousSocketServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="asynchronous.socket.server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AsynchronousSocketServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="asynchronous.socket.server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AsynchronousSocketServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="asynchronous.socket.server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AsynchronousSocketServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="asynchronous.socket.server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AsynchronousSocketServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="xptObj" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="asynchronous.socket.server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AsynchronousSocketServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="xptObj" type="462c0819:PsiDirectoryNode" />
-              <item name="tcp" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567097130204" />
@@ -247,9 +88,36 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.TestClient">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xptObj.udp.Client" />
+      <module name="asynchronous.socket.server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xptObj.udp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="xptObj.udp.Server" />
+      <module name="asynchronous.socket.server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xptObj.udp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.TestClient" />
       <module name="asynchronous.socket.server" />
+      <option name="PROGRAM_PARAMETERS" value="udp $USER_HOME$/mypipe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.*" />
@@ -260,9 +128,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestServer" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.TestServer" />
       <module name="asynchronous.socket.server" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/dummy_db/tpch/1/tbl2/lineitem.150k.1 udp $USER_HOME$/mypipe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.*" />
@@ -276,11 +145,14 @@
     <list>
       <item itemvalue="Application.TestServer" />
       <item itemvalue="Application.TestClient" />
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.Client" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TestClient" />
-        <item itemvalue="Application.TestServer" />
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
   </component>
@@ -297,92 +169,12 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="53" y="-2" width="1867" height="1082" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="DB Browser" show_stripe_button="false" />
-      <window_info id="UI Designer" />
-      <window_info id="Project Explorer" show_stripe_button="false" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Job Explorer" show_stripe_button="false" />
-      <window_info auto_hide="true" id="Learn" show_stripe_button="false" weight="0.3294893" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24986272" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="DB Execution Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.32991803" />
-      <window_info anchor="bottom" id="Console" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32991803" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32991803" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="PlantUML" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="DB Browser" order="1" show_stripe_button="false" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Project Explorer" order="3" show_stripe_button="false" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Job Explorer" order="6" show_stripe_button="false" />
-      <window_info auto_hide="true" id="Learn" order="7" show_stripe_button="false" weight="0.3294893" />
-      <window_info id="Image Layers" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="9" visible="true" weight="0.24986272" />
-      <window_info id="Structure" order="10" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="DB Execution Console" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32991803" />
-      <window_info anchor="bottom" id="Console" order="5" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32991803" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32991803" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="right" id="PlantUML" order="0" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout-to-restore>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -390,141 +182,12 @@
       </map>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Application">
         <watch expression="items" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/io/DataOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
-          <folding>
-            <element signature="e#1269#1270#0" expanded="true" />
-            <element signature="e#1295#1296#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/util/Profiler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xptObj/tcp/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="70" column="15" lean-forward="true" selection-start-line="70" selection-end-line="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xptObj/tcp/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="25" column="78" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1860#1861#0" expanded="true" />
-            <element signature="e#1905#1906#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/server/TCPServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/server/KyroServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/server/AbstractServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/client/AbstractClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/client/KyroClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/TestServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="67" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/client/TCPClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/TestClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

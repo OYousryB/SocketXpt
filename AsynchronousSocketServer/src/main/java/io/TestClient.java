@@ -1,15 +1,31 @@
 package io;
 
-import io.client.AbstractClient;
-import io.client.KyroClient;
-import io.client.TCPClient;
+import io.client.*;
 import objects.Lineitem;
 
 public class TestClient {
 
     public static void main(String[] args) {
-//        AbstractClient client = new TCPClient("localhost", 6000);
-        AbstractClient client = new KyroClient("localhost", 6000, Lineitem.class);
+        AbstractClient client;
+
+        switch(args[0]){
+            case "udp":
+                client = new UDPClient(6000);
+                break;
+            case "tcp":
+                client = new TCPClient("localhost", 6000);
+                break;
+            case "kryo":
+                client = new KyroClient("localhost", 6000, Lineitem.class);
+                break;
+            case "pipe":
+                client  = new NamedPipeClient(args[1]);
+                break;
+            default:
+                client = null;
+                System.out.println("Please Select a valid protocol");
+                System.exit(0);
+        }
         client.run();
     }
 }

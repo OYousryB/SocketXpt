@@ -31,14 +31,17 @@ public abstract class AbstractServer<O extends OutputStream> {
     }
 
     public void run(String inputPath){
+        int count = 0;
         try {
             List<Serializable> data = read(inputPath);
             O outputStream = start();
             long start = Profiler.startProfile("Starting Transmitting Data");
             for(Serializable i: data) {
                 write(i, outputStream);
+                count++;
             }
             Profiler.endProfile("Finished Transmitting Data", start);
+            Profiler.transmitted(count);
             terminate(outputStream);
         } catch (Exception e) {
             e.printStackTrace();

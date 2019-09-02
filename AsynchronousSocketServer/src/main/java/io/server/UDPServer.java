@@ -1,27 +1,16 @@
 package io.server;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
+
 
 public class UDPServer extends AbstractServer<ObjectOutputStream>{
     private final int port;
 
     private DatagramSocket dataSocket;
-    private InetAddress ip;
-
-    {
-        try {
-            ip = InetAddress.getLocalHost();
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
-    }
+    private InetAddress IPAddress;
 
     public UDPServer(int port) {
         this.port = port;
@@ -29,9 +18,10 @@ public class UDPServer extends AbstractServer<ObjectOutputStream>{
 
     @Override
     protected ObjectOutputStream start() throws IOException {
+        IPAddress = InetAddress.getLocalHost();
+        ByteArrayOutputStream byteStream = new ByteArrayOutputStream(95535);
         dataSocket = new DatagramSocket();
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        return new ObjectOutputStream(outputStream);
+        return new ObjectOutputStream(byteStream);
     }
 
     @Override
@@ -46,7 +36,7 @@ public class UDPServer extends AbstractServer<ObjectOutputStream>{
         os.writeObject(i);
         byte[] data = byteOutputStream.toByteArray();
 
-        DatagramPacket sendPacket = new DatagramPacket(data, data.length, ip, port);
+        DatagramPacket sendPacket = new DatagramPacket(data, data.length, IPAddress, port);
         dataSocket.send(sendPacket);
     }
 }

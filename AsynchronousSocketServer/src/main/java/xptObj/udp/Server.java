@@ -18,7 +18,7 @@ public class Server {
         List<Nation> nations = new ArrayList<>();
 
         try {
-            rawData = new DataInputStream(new FileInputStream("/home/yousry/dummy_db/tpch/1/tbl2/lineitem.tb1.x"));
+            rawData = new DataInputStream(new FileInputStream("/home/yousry/dummy_db/tpch/1/tbl2/lineitem.150k.1"));
             String newLine = rawData.readLine();
             while (newLine != null){
                 String[] items = newLine.split("\\|");
@@ -48,18 +48,6 @@ public class Server {
                 }
             });
 
-            while (!line.equals("Over")) {
-                try {
-                    line = rawData.readLine();
-                    sender = line.getBytes();
-                    Thread.sleep(1000);
-
-                    DatagramPacket DpSend = new DatagramPacket(sender, sender.length, ip, port);
-                    ds.send(DpSend);
-                } catch (Exception e) {
-                    line = "Over";
-                }
-            }
             long finish = System.currentTimeMillis();
             System.out.println("Finished in : " + ((finish - start)/ 1000) + " Secs");
         } catch (Exception e) {

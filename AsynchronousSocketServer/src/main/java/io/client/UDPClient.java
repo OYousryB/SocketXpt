@@ -25,8 +25,7 @@ public class UDPClient extends AbstractClient<ObjectInputStream> {
         dataReceive = new DatagramPacket(receive, receive.length);
         dataSocket.receive(dataReceive);
         byte[] data = dataReceive.getData();
-        ByteArrayInputStream in = new ByteArrayInputStream(data);
-        return new ObjectInputStream(in);
+        return new ObjectInputStream(new ByteArrayInputStream(data));
     }
 
     @Override
@@ -36,6 +35,12 @@ public class UDPClient extends AbstractClient<ObjectInputStream> {
 
     @Override
     protected Serializable read(ObjectInputStream inputStream) throws IOException, ClassNotFoundException {
+        dataReceive = new DatagramPacket(receive, receive.length);
+        dataSocket.setSoTimeout(50);
+        dataSocket.receive(dataReceive);
+        byte[] data = dataReceive.getData();
+        inputStream =  new ObjectInputStream(new ByteArrayInputStream(data));
+
         return (Serializable) inputStream.readObject();
     }
 }

@@ -11,4 +11,8 @@ public class Profiler {
         long end = System.currentTimeMillis();
         System.out.println(message + " [" + (double)(end - start)/1000 + " seconds]");
     }
+
+    public static void transmitted(int count){
+        System.out.println(count + " Objects Transmitted");
+    }
 }
