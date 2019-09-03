@@ -2,6 +2,7 @@ package io.client;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
+import objects.Lineitem;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -38,6 +39,8 @@ public class KryoTCPClient extends AbstractClient<Input>{
 
     @Override
     protected Serializable read(Input inputStream) throws IOException, ClassNotFoundException {
-        return (Serializable) kryo.readObject(inputStream, clazz);
+//        return (Serializable) kryo.readObject(inputStream, clazz);
+        return (Serializable) Lineitem.fromBytes((byte[])kryo.readObject(inputStream, clazz));
+
     }
 }

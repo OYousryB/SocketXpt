@@ -19,13 +19,13 @@ public class TestClient {
                 client  = new NamedPipeClient(args[1]);
                 break;
             case "kryo_tcp":
-                client = new KryoTCPClient("localhost", 6000, Lineitem.class);
+                client = new KryoTCPClient("localhost", 6000, byte[].class);
                 break;
             case "kryo_udp":
                 client = new KryoUDPClient(6000, Lineitem.class);
                 break;
             case "kryo_pipe":
-                client = new KryoNamedPipeClient(args[1], Lineitem.class);
+                client = new KryoNamedPipeClient(args[1], byte[].class);
                 break;
             default:
                 client = null;

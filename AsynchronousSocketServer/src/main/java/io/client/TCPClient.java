@@ -1,5 +1,7 @@
 package io.client;
 
+import objects.Lineitem;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
@@ -31,6 +33,7 @@ public class TCPClient extends AbstractClient<ObjectInputStream>{
 
     @Override
     protected Serializable read(ObjectInputStream inputStream) throws IOException, ClassNotFoundException {
-        return (Serializable) inputStream.readObject();
+//        return (Serializable) inputStream.readObject();
+        return (Serializable) Lineitem.fromBytes((byte[])inputStream.readObject());
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class AbstractServer<O extends OutputStream> {
 
-    private List<Serializable> read(String inputPath) throws IOException {
+    private List<Serializable> read(String inputPath) throws IOException, ClassNotFoundException {
 
         List<Serializable> data = new LinkedList<>();
         DataInputStream rawData = new DataInputStream(new FileInputStream(inputPath));
@@ -21,10 +21,9 @@ public abstract class AbstractServer<O extends OutputStream> {
 
             data.add(new Lineitem(Long.parseLong(items[0]), Long.parseLong(items[1]), Long.parseLong(items[2]), Long.parseLong(items[3]),
                     Double.parseDouble(items[4]), Double.parseDouble(items[5]), Double.parseDouble(items[6]), Double.parseDouble(items[7]),
-                    items[8], items[9], items[10], items[11], items[12], items[13], items[14], items[15]));
+                    items[8], items[9], items[10], items[11], items[12], items[13], items[14], items[15]).toByteBuffer());
             newLine = rawData.readLine();
         }
-
         Profiler.endProfile("Finished Loading Data", start);
 
         return data;

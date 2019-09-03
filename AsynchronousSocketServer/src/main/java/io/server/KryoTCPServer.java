@@ -19,6 +19,8 @@ public class KryoTCPServer extends AbstractServer<Output> {
     public KryoTCPServer(int port, Class clazz){
         this.kryo = new Kryo();
         kryo.register(clazz);
+        kryo.register(byte[].class);
+
         this.port = port;
     }
 

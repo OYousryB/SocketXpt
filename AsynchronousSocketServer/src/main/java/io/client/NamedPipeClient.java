@@ -1,6 +1,7 @@
 package io.client;
 
 import com.esotericsoftware.kryo.io.Input;
+import objects.Lineitem;
 
 import java.io.*;
 
@@ -25,6 +26,7 @@ public class NamedPipeClient extends AbstractClient<ObjectInputStream> {
 
     @Override
     protected Serializable read(ObjectInputStream inputStream) throws IOException, ClassNotFoundException {
-        return (Serializable) pipe.readObject();
+//        return (Serializable) inputStream.readObject();
+        return (Serializable) Lineitem.fromBytes((byte[])inputStream.readObject());
     }
 }

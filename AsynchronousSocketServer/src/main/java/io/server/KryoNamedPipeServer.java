@@ -2,6 +2,7 @@ package io.server;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Output;
+import objects.Lineitem;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,6 +19,7 @@ public class KryoNamedPipeServer extends AbstractServer<Output> {
 
         this.kryo = new Kryo();
         kryo.register(clazz);
+        kryo.register(byte[].class);
     }
 
     @Override

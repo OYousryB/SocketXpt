@@ -3,14 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="84894d02-56a2-4a8d-87b7-705a77ea2018" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/client/KryoUDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/client/KryoUDPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/client/UDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/client/UDPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/TestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/client/KryoNamedPipeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/client/KryoNamedPipeClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/client/KryoTCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/client/KryoTCPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/client/NamedPipeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/client/NamedPipeClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/client/TCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/client/TCPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/server/AbstractServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/server/AbstractServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/server/KryoNamedPipeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/server/KryoNamedPipeServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/server/KryoTCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/server/KryoTCPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/server/KryoUDPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/server/KryoUDPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/server/UDPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/server/UDPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/client/KryoUDPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/client/KryoUDPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/client/UDPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/client/UDPClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/objects/Lineitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/objects/Lineitem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/asynchronous.socket.server.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/TestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/TestClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/client/KryoNamedPipeClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/client/KryoNamedPipeClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/client/KryoTCPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/client/KryoTCPClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/client/NamedPipeClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/client/NamedPipeClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/client/TCPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/client/TCPClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/server/AbstractServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/server/AbstractServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/server/KryoNamedPipeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/server/KryoNamedPipeServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/server/KryoTCPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/server/KryoTCPServer.class" afterDir="false" />
@@ -18,7 +25,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/io/server/NamedPipeServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/server/NamedPipeServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/server/TCPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/server/TCPServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/server/UDPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/server/UDPServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AsynchronousSocketcClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AsynchronousSocketcClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/objects/Lineitem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/objects/Lineitem.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,9 +63,10 @@
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567097130204" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -131,7 +139,7 @@
     <configuration name="TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.TestClient" />
       <module name="asynchronous.socket.server" />
-      <option name="PROGRAM_PARAMETERS" value="kryo_pipe $USER_HOME$/mypipe" />
+      <option name="PROGRAM_PARAMETERS" value="pipe $USER_HOME$/mypipe" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.*" />
@@ -145,7 +153,7 @@
     <configuration name="TestServer" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.TestServer" />
       <module name="asynchronous.socket.server" />
-      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/dummy_db/tpch/1/tbl/lineitem/lineitem.tbl.1 kryo_pipe $USER_HOME$/mypipe" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/dummy_db/tpch/1/tbl/lineitem/lineitem.tbl.1 pipe $USER_HOME$/mypipe $USER_HOME$/dummy_db/tpch/1/tbl2/lineitem.5.1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.*" />
@@ -197,89 +205,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="items" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>scala-sdk-2.11.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>asynchronous.socket.server</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: com.esotericsoftware:kryo:5.0.0-RC4</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
