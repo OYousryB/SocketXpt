@@ -19,7 +19,7 @@ public class ClientWithObjects {
             socket = new Socket(address, port);
             System.out.println("Connected to incorta client");
 
-            in = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
+            in = new ObjectInputStream(socket.getInputStream());
         } catch(IOException i) {
             System.out.println(i);
         }
@@ -27,8 +27,7 @@ public class ClientWithObjects {
         while (true) {
             try {
                 Lineitem n = (Lineitem) in.readObject();
-//                System.out.println("Received " + n.getN_name() + " Object(s)");
-                System.out.println("Count is:" + count++);
+                System.out.println(count++ + " Items received");
             }
             catch(Exception e) {
                 System.out.println(e);
