@@ -29,7 +29,7 @@ public abstract class AbstractClient<O extends InputStream> {
                     break;
                 }
             } while(d != null);
-            Profiler.endProfile("Finished Receiving " + count + " objects", start);
+            Profiler.endProfile("Finished Receiving " + count + "objects", start);
             terminate(inputStream);
         } catch (Exception e) {
             e.printStackTrace();
