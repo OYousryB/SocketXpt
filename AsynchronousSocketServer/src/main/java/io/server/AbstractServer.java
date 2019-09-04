@@ -1,6 +1,7 @@
 package io.server;
 
 import io.util.Profiler;
+import objects.GenericTable;
 import objects.Lineitem;
 
 import java.io.*;
@@ -13,6 +14,7 @@ public abstract class AbstractServer<O extends OutputStream> {
 
         List<Serializable> data = new LinkedList<>();
         DataInputStream rawData = new DataInputStream(new FileInputStream(inputPath));
+        GenericTable table = new GenericTable("lineitem", "\\|", inputPath);
         long start = Profiler.startProfile("Starting Loading Data");
 
         String newLine = rawData.readLine();
@@ -21,19 +23,21 @@ public abstract class AbstractServer<O extends OutputStream> {
 
             data.add(new Lineitem(Long.parseLong(items[0]), Long.parseLong(items[1]), Long.parseLong(items[2]), Long.parseLong(items[3]),
                     Double.parseDouble(items[4]), Double.parseDouble(items[5]), Double.parseDouble(items[6]), Double.parseDouble(items[7]),
-                    items[8], items[9], items[10], items[11], items[12], items[13], items[14], items[15]).toByteBuffer());
+                    items[8], items[9], items[10], items[11], items[12], items[13], items[14], items[15]));
             newLine = rawData.readLine();
         }
-        Profiler.endProfile("Finished Loading Data", start);
 
+        Profiler.endProfile("Finished Loading Data", start);
         return data;
     }
 
     public void run(String inputPath){
         int count = 0;
         try {
+
             List<Serializable> data = read(inputPath);
             O outputStream = start();
+            Thread.sleep(10000);
             long start = Profiler.startProfile("Starting Transmitting Data");
             for(Serializable i: data) {
                 write(i, outputStream);

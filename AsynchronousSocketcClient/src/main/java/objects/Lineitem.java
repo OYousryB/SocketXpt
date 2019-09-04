@@ -1,6 +1,8 @@
 package objects;
 
-import java.io.Serializable;
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.util.Arrays;
 
 public class Lineitem implements Serializable {
     private long l_orderkey;
@@ -45,7 +47,9 @@ public class Lineitem implements Serializable {
                 '}';
     }
 
-    public Lineitem(long l_orderkey, long l_partkey, long l_suppkey, long l_linenumber, double l_quantity, double l_extendedprice, double l_discount, double l_tax, String l_returnflag, String l_linestatus, String l_shipdate, String l_commitdate, String l_receiptdate, String l_shipinstruct, String l_shipmode, String l_comment) {
+    public Lineitem(long l_orderkey, long l_partkey, long l_suppkey, long l_linenumber, double l_quantity, double l_extendedprice,
+                    double l_discount, double l_tax, String l_returnflag, String l_linestatus, String l_shipdate, String l_commitdate,
+                    String l_receiptdate, String l_shipinstruct, String l_shipmode, String l_comment) {
         this.l_orderkey = l_orderkey;
         this.l_partkey = l_partkey;
         this.l_suppkey = l_suppkey;
@@ -63,6 +67,19 @@ public class Lineitem implements Serializable {
         this.l_shipmode = l_shipmode;
         this.l_comment = l_comment;
     }
+
+    public Lineitem(long l_orderkey, long l_partkey, long l_suppkey, long l_linenumber, double l_quantity, double l_extendedprice,
+                    double l_discount, double l_tax) {
+        this.l_orderkey = l_orderkey;
+        this.l_partkey = l_partkey;
+        this.l_suppkey = l_suppkey;
+        this.l_linenumber = l_linenumber;
+        this.l_quantity = l_quantity;
+        this.l_extendedprice = l_extendedprice;
+        this.l_discount = l_discount;
+        this.l_tax = l_tax;
+    }
+
 
     public long getL_orderkey() {
         return l_orderkey;
@@ -190,5 +207,64 @@ public class Lineitem implements Serializable {
 
     public void setL_comment(String l_comment) {
         this.l_comment = l_comment;
+    }
+
+    public byte[] toByteBuffer(){
+        ByteBuffer buffer = ByteBuffer.allocate(1000);
+        buffer.putLong(l_orderkey);
+        buffer.putLong(l_partkey);
+        buffer.putLong(l_suppkey);
+        buffer.putLong(l_linenumber);
+        buffer.putDouble(l_quantity);
+        buffer.putDouble(l_extendedprice);
+        buffer.putDouble(l_discount);
+        buffer.putDouble(l_tax);
+        putString(buffer, l_returnflag);
+        putString(buffer, l_linestatus);
+        putString(buffer, l_shipdate);
+        putString(buffer, l_commitdate);
+        putString(buffer, l_receiptdate);
+        putString(buffer, l_shipinstruct);
+        putString(buffer, l_shipmode);
+        putString(buffer, l_comment);
+
+        return Arrays.copyOf(buffer.array(), buffer.position());
+    }
+
+    public static Lineitem fromBytes(byte[] bytes) throws IOException, ClassNotFoundException {
+        ByteBuffer buffer = ByteBuffer.wrap(bytes);
+        Lineitem lineitem = new Lineitem();
+        lineitem.l_orderkey = buffer.getLong ();
+        lineitem.l_partkey = buffer.getLong ();
+        lineitem.l_suppkey = buffer.getLong ();
+        lineitem.l_linenumber = buffer.getLong ();
+        lineitem.l_quantity = buffer.getDouble ();
+        lineitem.l_extendedprice = buffer.getDouble ();
+        lineitem.l_discount = buffer.getDouble ();
+        lineitem.l_tax = buffer.getDouble();
+        lineitem.l_returnflag = getString(buffer);
+        lineitem.l_linestatus = getString(buffer);
+        lineitem.l_shipdate = getString(buffer);
+        lineitem.l_commitdate = getString(buffer);
+        lineitem.l_receiptdate = getString(buffer);
+        lineitem.l_shipinstruct = getString(buffer);
+        lineitem.l_shipmode = getString(buffer);
+        lineitem.l_comment = getString(buffer);
+
+        return lineitem;
+    }
+
+    private static String getString(ByteBuffer buffer) {
+        int len = buffer.getInt();
+        byte[] bytes = new byte[len];
+        buffer.get(bytes);
+
+        return new String(bytes);
+    }
+
+    private void putString(ByteBuffer buffer, String text) {
+        byte[] descsBytes = text.getBytes();
+        buffer.putInt(descsBytes.length);
+        buffer.put(descsBytes);
     }
 }
