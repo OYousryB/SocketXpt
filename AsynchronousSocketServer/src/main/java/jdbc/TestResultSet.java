@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class TestResultSet {
 
     public static void main(String[] args) throws SQLException {
-        ResultSet resultSet = new RemoteResultSetWithSequentialColumnAccess();
+        ResultSet resultSet = new RemoteResultSetWithSequentialColumnAccess(new byte[]{4,4,4,4});
         while(resultSet.next()) {
             System.out.println(resultSet.getInt(1));
         }

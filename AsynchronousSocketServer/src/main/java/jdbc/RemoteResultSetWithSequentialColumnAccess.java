@@ -31,14 +31,20 @@ public class RemoteResultSetWithSequentialColumnAccess extends ResultSetAdapter 
         blockingQueue.add(data);
     }
 
+    public void setEndOfData(boolean state) {
+        endOfData = state;
+    }
     @Override
     public boolean next() throws SQLException {
-        if(endOfData)
+        if(endOfData && blockingQueue.isEmpty())
             return false;
         byte[] data = blockingQueue.poll();
         current = ByteBuffer.wrap(data);
         int columnCount = types.length;
-        nulls = new byte[columnCount];
+        int bytesCount = columnCount >> 3;
+        if((columnCount & 7) > 0)
+            bytesCount ++;
+        nulls = new byte[bytesCount];
         current.get(nulls);
         lastReadColumnIndex = 0;
         return true;
