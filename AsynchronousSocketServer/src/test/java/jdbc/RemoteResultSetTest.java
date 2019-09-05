@@ -9,10 +9,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Arrays;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.LinkedBlockingDeque;
 
 public class RemoteResultSetTest {
 
@@ -240,7 +238,13 @@ public class RemoteResultSetTest {
         Runnable consumerTask = () -> {
             try {
                 while(!resultSet.isEndOfData()) {
-                    resultSet.next();
+                    if (!resultSet.isBlockingQueueEmpty()){
+                        Assert.assertTrue(resultSet.next());
+                        for (int c = 0; c < types.length; c++) {
+                            Assert.assertEquals(nullAsZero(data[c]), nullAsZero(resultSet.getObject(c + 1)));
+                            Assert.assertEquals(nullAsZero(data[c]), nullAsZero(findGetter(types[c]).func(resultSet, c + 1)));
+                        }
+                    }
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
