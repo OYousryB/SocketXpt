@@ -150,7 +150,7 @@ public class RemoteResultSetWithSequentialColumnAccess extends ResultSetAdapter 
     @Override
     public String getString(int columnIndex) throws SQLException {
         if(columnIndex == lastReadColumnIndex) {
-            current.position(current.position() - (lastStringSize + 4));
+            current.position(current.position() - (lastStringSize + 2));
         } else {
             assert (columnIndex == lastReadColumnIndex+1);
         }
@@ -161,7 +161,7 @@ public class RemoteResultSetWithSequentialColumnAccess extends ResultSetAdapter 
     }
 
     private String retrieveString(ByteBuffer buffer) {
-        int bufferLength = buffer.getInt();
+        int bufferLength = buffer.getShort();
         byte[] bytes = new byte[bufferLength];
         buffer.get(bytes);
         lastStringSize = bufferLength;
@@ -170,7 +170,7 @@ public class RemoteResultSetWithSequentialColumnAccess extends ResultSetAdapter 
 
     public static void insertString(ByteBuffer buffer, String text) {
         byte[] bytesSize = text == null ? new byte[0] : text.getBytes();
-        buffer.putInt(bytesSize.length);
+        buffer.putShort((short) bytesSize.length);
         buffer.put(bytesSize);
     }
 }
