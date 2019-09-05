@@ -35,9 +35,14 @@ public class RemoteResultSetWithSequentialColumnAccess extends ResultSetAdapter 
     public void setEndOfData(boolean state) {
         endOfData = state;
     }
+
+    public boolean isEndOfData() {
+        return endOfData;
+    }
+
     @Override
     public boolean next() throws SQLException {
-        if(endOfData && blockingQueue.isEmpty())
+        if((endOfData && blockingQueue.isEmpty()) || blockingQueue.isEmpty())
             return false;
         byte[] data = blockingQueue.poll();
         current = ByteBuffer.wrap(data);
