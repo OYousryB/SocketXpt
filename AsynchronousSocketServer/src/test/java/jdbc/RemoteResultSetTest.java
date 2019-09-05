@@ -12,22 +12,27 @@ import java.util.Arrays;
 
 public class RemoteResultSetTest {
 
-    public static final byte B = RemoteResultSetWithSequentialColumnAccess.BOOLEAN_TYPE;
-    public static final byte T = RemoteResultSetWithSequentialColumnAccess.TIMESTAMP_TYPE;
-    public static final byte S = RemoteResultSetWithSequentialColumnAccess.SHORT_TYPE;
-    public static final byte I = RemoteResultSetWithSequentialColumnAccess.INT_TYPE;
-    public static final byte L = RemoteResultSetWithSequentialColumnAccess.LONG_TYPE;
-    public static final byte D = RemoteResultSetWithSequentialColumnAccess.DOUBLE_TYPE;
-    public static final byte R = RemoteResultSetWithSequentialColumnAccess.STRING_TYPE;
+    private static final byte B = RemoteResultSetWithSequentialColumnAccess.BOOLEAN_TYPE;
+    private static final byte T = RemoteResultSetWithSequentialColumnAccess.TIMESTAMP_TYPE;
+    private static final byte S = RemoteResultSetWithSequentialColumnAccess.SHORT_TYPE;
+    private static final byte I = RemoteResultSetWithSequentialColumnAccess.INT_TYPE;
+    private static final byte L = RemoteResultSetWithSequentialColumnAccess.LONG_TYPE;
+    private static final byte D = RemoteResultSetWithSequentialColumnAccess.DOUBLE_TYPE;
+    private static final byte R = RemoteResultSetWithSequentialColumnAccess.STRING_TYPE;
 
     @DataProvider
     public Object[][] getData() {
         return new Object[][]{
-                { new Object[]{5, 10, 20}, new byte[] { I, I, I }},
-                { new Object[]{5L, 10L, 20L}, new byte[] { L, L, L }},
-                { new Object[]{5L, 10L, 20L, 5, 10, 20}, new byte[] { L, L, L, I, I, I }},
-                { new Object[]{9, null, 512}, new byte[] { I, I, I }},
-                { new Object[]{null, null, null}, new byte[] { I, I, I }}
+                { new Object[]{5, 10, 20}, new byte[] { I, I, I }, 5},
+                { new Object[]{5L, 10L, 20L}, new byte[] { L, L, L }, 5},
+                { new Object[]{5.0, 10.0, 20.0}, new byte[] { D, D, D }, 5},
+                { new Object[]{true, false, false}, new byte[] { B, B, B }, 5},
+                { new Object[]{new Timestamp(System.currentTimeMillis()), new Timestamp(System.currentTimeMillis() + 10000)}, new byte[] { T, T }, 5},
+                { new Object[]{(short)5, (short)10, (short)20}, new byte[] { S, S, S }, 5},
+                { new Object[]{5L, 10L, 20L, 5, 10, 20}, new byte[] { L, L, L, I, I, I }, 5},
+                { new Object[]{9, null, 512}, new byte[] { I, I, I }, 5},
+                { new Object[]{9, null, 512.0, 30L, false, }, new byte[] { I, I, D, L, B }, 5},
+                { new Object[]{null, null, null}, new byte[] { I, I, I }, 5}
         };
     }
 
@@ -97,29 +102,69 @@ public class RemoteResultSetTest {
                         throw new RuntimeException(e);
                     }
                 };
+            case B:
+                return  (r, i) -> {
+                    try {
+                        return (Boolean)r.getBoolean(i);
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                };
+            case T:
+                return  (r, i) -> {
+                    try {
+                        return (Timestamp)r.getTimestamp(i);
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                };
+            case S:
+                return  (r, i) -> {
+                    try {
+                        return (Short)r.getShort(i);
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                };
+            case D:
+                return  (r, i) -> {
+                    try {
+                        return (Double)r.getDouble(i);
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                };
+            case R:
+                return  (r, i) -> {
+                    try {
+                        return (String)r.getString(i);
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                };
+
         }
         return null;
     }
 
     @Test(dataProvider= "getData")
-    public void testRetrievePrimitiveFromMultipleRows(Object[] data, byte[] types) throws SQLException {
+    public void testRetrievePrimitiveFromMultipleRows(Object[] data, byte[] types, int rows) throws SQLException {
         RemoteResultSetWithSequentialColumnAccess resultSet = new RemoteResultSetWithSequentialColumnAccess(types);
-        resultSet.addRow(encodeRow(types, data));
-        resultSet.addRow(encodeRow(types, data));
-        resultSet.setEndOfData(true);
-        Assert.assertTrue(resultSet.next());
-        for(int c=0; c<types.length; c++) {
-            Assert.assertEquals(nullAsZero(data[c]), nullAsZero(findGetter(types[c]).func(resultSet, c+1)));
+        for (int i=0; i< rows; i++){
+            resultSet.addRow(encodeRow(types, data));
         }
-        Assert.assertTrue(resultSet.next());
-        for(int c=0; c<types.length; c++) {
-            Assert.assertEquals(nullAsZero(data[c]), nullAsZero(findGetter(types[c]).func(resultSet, c+1)));
+        resultSet.setEndOfData(true);
+        for (int i=0; i< rows; i++) {
+            Assert.assertTrue(resultSet.next());
+            for(int c=0; c<types.length; c++) {
+                Assert.assertEquals(nullAsZero(data[c]), nullAsZero(findGetter(types[c]).func(resultSet, c+1)));
+            }
         }
         Assert.assertFalse(resultSet.next());
     }
 
     @Test(dataProvider= "getData")
-    public void testRetrieveObjectThenPrimitiveFromSingleRow(Object[] data, byte[] types) throws SQLException {
+    public void testRetrieveObjectThenPrimitiveFromSingleRow(Object[] data, byte[] types, int rows) throws SQLException {
         RemoteResultSetWithSequentialColumnAccess resultSet = new RemoteResultSetWithSequentialColumnAccess(types);
         resultSet.addRow(encodeRow(types, data));
         resultSet.setEndOfData(true);
@@ -130,4 +175,23 @@ public class RemoteResultSetTest {
         }
         Assert.assertFalse(resultSet.next());
     }
+
+    @Test(dataProvider= "getData")
+    public void testRetrieveObjectsFromMultipleRows(Object[] data, byte[] types, int rows) throws SQLException {
+        RemoteResultSetWithSequentialColumnAccess resultSet = new RemoteResultSetWithSequentialColumnAccess(types);
+        for (int i=0; i< rows; i++){
+            resultSet.addRow(encodeRow(types, data));
+        }
+        resultSet.setEndOfData(true);
+
+        for (int i=0; i< rows; i++) {
+            Assert.assertTrue(resultSet.next());
+            for(int c=0; c<types.length; c++) {
+                Assert.assertEquals(nullAsZero(data[c]), resultSet.getObject(c+1));
+            }
+        }
+
+        Assert.assertFalse(resultSet.next());
+    }
+
 }
