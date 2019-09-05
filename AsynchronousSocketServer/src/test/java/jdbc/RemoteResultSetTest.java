@@ -31,12 +31,17 @@ public class RemoteResultSetTest {
                 { new Object[]{5L, 10L, 20L}, new byte[] { L, L, L }, 5},
                 { new Object[]{5.0, 10.0, 20.0}, new byte[] { D, D, D }, 5},
                 { new Object[]{true, false, false}, new byte[] { B, B, B }, 5},
-                { new Object[]{new Timestamp(System.currentTimeMillis()), new Timestamp(System.currentTimeMillis() + 10000)}, new byte[] { T, T }, 5},
+                { new Object[]{new Timestamp(System.currentTimeMillis()), new Timestamp(System.currentTimeMillis() + 10000), null}, new byte[] { T, T, R }, 5},
                 { new Object[]{(short)5, (short)10, (short)20}, new byte[] { S, S, S }, 5},
                 { new Object[]{5L, 10L, 20L, 5, 10, 20}, new byte[] { L, L, L, I, I, I }, 5},
                 { new Object[]{9, null, 512}, new byte[] { I, I, I }, 5},
                 { new Object[]{9, null, 512.0, 30L, false, }, new byte[] { I, I, D, L, B }, 5},
-                { new Object[]{null, null, null}, new byte[] { I, I, I }, 5}
+                { new Object[]{"testing strings", 9 }, new byte[] { R, I }, 5},
+                { new Object[]{"testing strings", 9, null, 44.3 }, new byte[] { R, I, R, D }, 5},
+                { new Object[]{new Timestamp(System.currentTimeMillis()), null, null }, new byte[] {  T, I, I }, 5},
+                { new Object[]{"testing strings", 9, 4.0, 512L, true, new Timestamp(System.currentTimeMillis()), null, (short)30, "String", null }, new byte[] { R, I, D, L, B, T, R, S, R, R }, 5},
+                { new Object[]{null, null, null, null, null, null, null}, new byte[] { D, R, S, I, B, L, T }, 5},
+                { new Object[]{null, "String", null, 9, null, 44.3, false, new Timestamp(System.currentTimeMillis()), null, "String", null, 9, null, 44.3, false, new Timestamp(System.currentTimeMillis()), null }, new byte[] { R, R, R, I, D, D, B, T, I, R, R, I, D, D, B, T, I }, 5},
         };
     }
 
@@ -56,7 +61,8 @@ public class RemoteResultSetTest {
                 nulls[byteIndex] = (byte)(nulls[byteIndex] << 1);
                 columnIndex++;
             }
-            nulls[nulls.length-1] = (byte)(nulls[nulls.length-1] << (8 - columnIndex) & 7);
+            for(int i=0; i< bytesCount; i++)
+                nulls[i] = (byte)(nulls[i] << (8 - columnIndex) & 7);
             byteBuffer.put(nulls);
         }
         {
@@ -64,7 +70,7 @@ public class RemoteResultSetTest {
             for(Object o: fields) {
                 byte columnType = types[columnIndex];
                 switch(columnType){
-                    case RemoteResultSetWithSequentialColumnAccess.BOOLEAN_TYPE: byteBuffer.put(((Boolean)o) && o != null ? (byte)1 : (byte)0); break;
+                    case RemoteResultSetWithSequentialColumnAccess.BOOLEAN_TYPE: byteBuffer.put(o==null || !(Boolean)o ?  (byte)0 : (byte)1); break;
                     case RemoteResultSetWithSequentialColumnAccess.TIMESTAMP_TYPE: byteBuffer.putLong(o==null ? 0L : ((Timestamp)o).getTime()); break;
                     case RemoteResultSetWithSequentialColumnAccess.SHORT_TYPE: byteBuffer.putShort(o==null ? 0 : (Short)o); break;
                     case RemoteResultSetWithSequentialColumnAccess.INT_TYPE: byteBuffer.putInt(o==null ? 0 : (Integer)o); break;
@@ -81,6 +87,11 @@ public class RemoteResultSetTest {
     }
 
     private <T> Object nullAsZero(T i) {
+        if ((i instanceof Short) && (Short) i ==  0) return 0;
+        if ((i instanceof Double) && (Double) i ==  0.0) return 0;
+        if ((i instanceof Long) && (Long) i ==  0) return 0;
+        if ((i instanceof Boolean) && !((Boolean) i)) return 0;
+        if ((i instanceof Timestamp) && (Long)((Timestamp) i).getTime() == 0) return 0;
         return i == null || i.equals("") ? 0 : i;
     }
 
@@ -174,6 +185,7 @@ public class RemoteResultSetTest {
         resultSet.setEndOfData(true);
         Assert.assertTrue(resultSet.next());
         for(int c=0; c<types.length; c++) {
+//            System.out.println(nullAsZero(resultSet.getObject(c+1)));
 
             Assert.assertEquals(nullAsZero(data[c]), nullAsZero(resultSet.getObject(c+1)));
             Assert.assertEquals(nullAsZero(data[c]), nullAsZero(findGetter(types[c]).func(resultSet, c+1)));

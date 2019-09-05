@@ -169,7 +169,7 @@ public class RemoteResultSetWithSequentialColumnAccess extends ResultSetAdapter 
     }
 
     public static void insertString(ByteBuffer buffer, String text) {
-        byte[] bytesSize = text == null ? "".getBytes() : text.getBytes();
+        byte[] bytesSize = text == null ? new byte[0] : text.getBytes();
         buffer.putInt(bytesSize.length);
         buffer.put(bytesSize);
     }
