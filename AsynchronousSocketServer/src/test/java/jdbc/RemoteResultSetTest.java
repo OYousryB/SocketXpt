@@ -23,6 +23,10 @@ public class RemoteResultSetTest {
     @DataProvider
     public Object[][] getData() {
         return new Object[][]{
+                { new Object[]{"testing", "strings objects", "with various text sizes"}, new byte[] { R, R, R }, 5},
+                { new Object[]{null, null, null, null}, new byte[] { R, R, R, R}, 5},
+                { new Object[]{null, "Not a null value", null, null, "A string inserted here", "Another string"}, new byte[] { R, R, R, R, R, R }, 5},
+                { new Object[]{"Not null", 10, "big sized string with multiple words", 50.0}, new byte[] { R, I, R, D}, 5},
                 { new Object[]{5, 10, 20}, new byte[] { I, I, I }, 5},
                 { new Object[]{5L, 10L, 20L}, new byte[] { L, L, L }, 5},
                 { new Object[]{5.0, 10.0, 20.0}, new byte[] { D, D, D }, 5},
@@ -66,7 +70,7 @@ public class RemoteResultSetTest {
                     case RemoteResultSetWithSequentialColumnAccess.INT_TYPE: byteBuffer.putInt(o==null ? 0 : (Integer)o); break;
                     case RemoteResultSetWithSequentialColumnAccess.LONG_TYPE: byteBuffer.putLong(o==null ? 0 : (Long)o); break;
                     case RemoteResultSetWithSequentialColumnAccess.DOUBLE_TYPE: byteBuffer.putDouble(o==null ? 0 : (Double)o); break;
-                    case RemoteResultSetWithSequentialColumnAccess.STRING_TYPE: o = ""; break;   // TODO
+                    case RemoteResultSetWithSequentialColumnAccess.STRING_TYPE: RemoteResultSetWithSequentialColumnAccess.insertString(byteBuffer, o==null ? null :(String)o); break;
                     default:
                         throw new RuntimeException("Unsupported Type " + columnType);
                 }
@@ -77,14 +81,14 @@ public class RemoteResultSetTest {
     }
 
     private <T> Object nullAsZero(T i) {
-        return i == null ? 0 : i;
+        return i == null || i.equals("") ? 0 : i;
     }
 
     interface ResultSetGetter {
         Object func(ResultSet r, int columnIndex);
     }
 
-    ResultSetGetter findGetter(byte type){
+    private ResultSetGetter findGetter(byte type){
         switch (type) {
             case I:
                 return  (r, i) -> {
@@ -157,7 +161,7 @@ public class RemoteResultSetTest {
         for (int i=0; i< rows; i++) {
             Assert.assertTrue(resultSet.next());
             for(int c=0; c<types.length; c++) {
-                Assert.assertEquals(nullAsZero(data[c]), nullAsZero(findGetter(types[c]).func(resultSet, c+1)));
+                Assert.assertEquals(nullAsZero(data[c]),  nullAsZero(findGetter(types[c]).func(resultSet, c+1)));
             }
         }
         Assert.assertFalse(resultSet.next());
@@ -170,7 +174,8 @@ public class RemoteResultSetTest {
         resultSet.setEndOfData(true);
         Assert.assertTrue(resultSet.next());
         for(int c=0; c<types.length; c++) {
-            Assert.assertEquals(nullAsZero(data[c]), resultSet.getObject(c+1));
+
+            Assert.assertEquals(nullAsZero(data[c]), nullAsZero(resultSet.getObject(c+1)));
             Assert.assertEquals(nullAsZero(data[c]), nullAsZero(findGetter(types[c]).func(resultSet, c+1)));
         }
         Assert.assertFalse(resultSet.next());
@@ -187,10 +192,9 @@ public class RemoteResultSetTest {
         for (int i=0; i< rows; i++) {
             Assert.assertTrue(resultSet.next());
             for(int c=0; c<types.length; c++) {
-                Assert.assertEquals(nullAsZero(data[c]), resultSet.getObject(c+1));
+                Assert.assertEquals(nullAsZero(data[c]), nullAsZero(resultSet.getObject(c+1)));
             }
         }
-
         Assert.assertFalse(resultSet.next());
     }
 

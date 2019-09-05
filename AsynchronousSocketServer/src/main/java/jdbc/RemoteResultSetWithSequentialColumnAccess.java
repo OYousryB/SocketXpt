@@ -12,6 +12,7 @@ public class RemoteResultSetWithSequentialColumnAccess extends ResultSetAdapter 
     private boolean endOfData = false;
     private ByteBuffer current;
     private int lastReadColumnIndex;
+    private int lastStringSize;
     private byte[] nulls;
     private final byte[] types;
 
@@ -67,7 +68,7 @@ public class RemoteResultSetWithSequentialColumnAccess extends ResultSetAdapter 
             case INT_TYPE: o = getInt(columnIndex); break;
             case LONG_TYPE: o = getLong(columnIndex); break;
             case DOUBLE_TYPE: o = getDouble(columnIndex); break;
-            case STRING_TYPE: o = ""; break;   // TODO
+            case STRING_TYPE: o = getString(columnIndex); break;
             default:
                 throw new RuntimeException("Unsupported Type " + columnType);
         }
@@ -144,6 +145,33 @@ public class RemoteResultSetWithSequentialColumnAccess extends ResultSetAdapter 
         lastReadColumnIndex = columnIndex;
         double v = current.getDouble();
         return v;
+    }
+
+    @Override
+    public String getString(int columnIndex) throws SQLException {
+        if(columnIndex == lastReadColumnIndex) {
+            current.position(current.position() - (lastStringSize + 4));
+        } else {
+            assert (columnIndex == lastReadColumnIndex+1);
+        }
+        lastReadColumnIndex = columnIndex;
+        String v = retrieveString(current);
+
+        return v;
+    }
+
+    private String retrieveString(ByteBuffer buffer) {
+        int bufferLength = buffer.getInt();
+        byte[] bytes = new byte[bufferLength];
+        buffer.get(bytes);
+        lastStringSize = bufferLength;
+        return new String(bytes);
+    }
+
+    public static void insertString(ByteBuffer buffer, String text) {
+        byte[] bytesSize = text == null ? "".getBytes() : text.getBytes();
+        buffer.putInt(bytesSize.length);
+        buffer.put(bytesSize);
     }
 }
 
